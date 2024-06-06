@@ -2,17 +2,17 @@ package org.example.lesson_1
 
 fun main() {
 
-    val secondsInSpace: Short = 6480
+    val secondsInSpace: Int = 6480
     val minutes: Int
     val hours: Int
     val seconds: Int
+    val SECONDS_IN_HOUR = 3600
+    val SECONDS_IN_MINUTE = 60
 
-    hours = secondsInSpace / 3600
-    minutes = (secondsInSpace - hours * 3600) / 60
-    seconds = secondsInSpace - hours * 3600 - minutes * 60
+    hours = secondsInSpace / SECONDS_IN_HOUR
+    minutes = (secondsInSpace - hours * SECONDS_IN_HOUR) / SECONDS_IN_MINUTE
+    seconds = secondsInSpace - hours * SECONDS_IN_HOUR - minutes * SECONDS_IN_MINUTE
 
-    //не уверен что вывод такой, как требовалось в задании. 0 добавил вручную
-    //01:48:00
-    println("0$hours:$minutes:${seconds}0")
+    println("%02d:%02d:%02d".format(hours, minutes, seconds))
 
 }
