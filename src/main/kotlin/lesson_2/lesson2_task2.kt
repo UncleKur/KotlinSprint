@@ -1,4 +1,5 @@
 package org.example.lesson_2
+import kotlin.math.round
 
 fun main() {
 
@@ -9,7 +10,8 @@ fun main() {
     val totalStaffSalary = staffMembers * staffMemberSalary
     val totalInternSalary = internMembers * internMemberSalary
     val generalSalaryFund = totalStaffSalary + totalInternSalary
-    val averageMembersSalary = generalSalaryFund / (staffMembers + internMembers)
+    val averageMembersSalary: Float = (generalSalaryFund / (staffMembers + internMembers)).toFloat()
+    val averageMembersSalaryInteger = round(averageMembersSalary)
 
     val financialReport = """
     Количество сотрудников: $staffMembers
@@ -19,7 +21,7 @@ fun main() {
     Зарплатный фонд сотрудников: $totalStaffSalary
     Зарплатный фонд стажеров: $totalInternSalary
     Общий зарплатный фонд: $generalSalaryFund
-    Средняя зарплата сотрудника после прихода стажеров: $averageMembersSalary
+    Средняя зарплата сотрудника после прихода стажеров: $averageMembersSalaryInteger
     """.trimIndent()
 
     println(financialReport)
