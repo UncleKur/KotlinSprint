@@ -11,7 +11,7 @@ fun main() {
     val totalInternSalary = internMembers * internMemberSalary
     val generalSalaryFund = totalStaffSalary + totalInternSalary
     val averageMembersSalary: Float = (generalSalaryFund / (staffMembers + internMembers)).toFloat()
-    val averageMembersSalaryInteger = round(averageMembersSalary)
+    val averageMembersSalaryInteger = round(averageMembersSalary).toInt()
 
     val financialReport = """
     Количество сотрудников: $staffMembers
