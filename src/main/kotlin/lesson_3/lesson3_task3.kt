@@ -2,7 +2,7 @@ package org.example.lesson_3
 
 fun main() {
 
-    val multiplicationNum: Int = 5
+    val multiplicationNum: Byte = 5
     val multiplicationTable: String = """
         $multiplicationNum x 1 = ${multiplicationNum * 1}
         $multiplicationNum x 2 = ${multiplicationNum * 2}
