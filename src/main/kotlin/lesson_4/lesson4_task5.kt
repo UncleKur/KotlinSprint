@@ -26,8 +26,11 @@ fun main() {
                 && (suppliesAmount >= MINIMAL_SUPPLIES)
                 && (isGoodWeather == GOOD_WEATHER)
 
-    println("Корабль без повреждений может отправиться в плавание? $canHealthyShipStartJourney")
-    println("Корабль c повреждениями может отправиться в плавание? $canDamagedShipStartJourney")
+    println(
+        if (isHealthShip)
+            "Корабль без повреждений может отправиться в плавание? $canHealthyShipStartJourney"
+        else "Корабль с повреждениями может отправиться в плавание? $canDamagedShipStartJourney"
+    )
 }
 
 const val SHIP_FULL_HEALTH = true
