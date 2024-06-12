@@ -2,12 +2,13 @@ package org.example.lesson_5
 
 fun main() {
 
-    print("Для входа в приложение решите этот пример 2 + 5 = ?\nВаш ответ: ")
-    val userAnswer = readlnOrNull()?.toIntOrNull() ?: "Вы ввели не число"
-    if (userAnswer == 7) {
-        println("Добро пожаловать!")
-    } else {
-        println("Доступ запрещен.")
-    }
+    val term1 = 2
+    val term2 = 5
+    print("Для входа в приложение решите этот пример $term1 + $term2 = ?\nВаш ответ: ")
+    val userAnswer = readln().toInt()
+    val userAccess = if (userAnswer == (term1 + term2)) "Добро пожаловать!"
+    else "Доступ запрещен."
+
+    println(userAccess)
 
 }
